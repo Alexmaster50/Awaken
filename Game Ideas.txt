@@ -1,0 +1,148 @@
+Attributes:
+
+
+Reach		- Enemy turn is force skipped dependant on Reach factor(x)
+Damage		- Amount of damage (dmg) a weapon can output.
+Miss		- Heavier weapons are harder to handle. (miss [0-75]%) Miss change.
+CritChance	- Chance to deal a critical hit (critC [0-85]%)
+CritDmg		- Amount of extra damage crits do (critD [200-300]%)
+
+
+Spear	-	
+ ______
+/______\
+|o____o|
+| o__o |
+\__oo__/ 
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+   ||
+  /  \
+ / __ \
+ ||__||
+ \____/
+
+
+   ___
+  /   \
+ /     \
+/       \
+|       |
+|
+
+
+
+
+
+
+
+
+Sword	-	
+
+              _
+  _  _       / |_______________________
+ / \/ \_____/  |_______________________\
+ | X   _____<* |                       /
+ \_/\_/     \  |______________________/
+             \_|
+
+
+Dark brown (Handle)	68
+Clean Iron(Sword): 	248
+
+
+	     _
+ _  _       / |___________________________________
+/ \/ \_____/  |___________________________________\
+| <>  _____<* |                                   /
+\_/\_/     \  |__________________________________/
+	    \_|
+
+
+	 _
+ _      / |___________________
+|_>====<* |__________________/
+        \_|
+
+ 
+                ___
+      _________/  /
+<>===<___________/
+
+
+Knife	-	
+
+
+   ______
+<==\____/
+
+     ___________
+o===<__________/
+
+o\---/)========>
+
+
+
+
+
+
+
+
+
+
+
+#######
+
+ ___________________
+|__________________/
+
+o===
+
+
+
+Swords
+
+
+
+
+
+Heavy:
+         
+
+
+
+
+Medium:
+
+
+
+Light:
+
+
+Scimatar
+
+Wand/Heavy
+
+
+
+
+
+
+
+
+#######
+
+todo: inventory system via .txt
+
+namespace classWeapons
+{
+	enum class WeaponType {Knife = 1, Sword, Spear};
+
