@@ -17,4 +17,4 @@ Core:
 	system("cls");
 	goto Core;
 }
-//Copyright Alexander Cranston 2015-2016
+//Alexander Cranston 15/11/2015-20/09/2016

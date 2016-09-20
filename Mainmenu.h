@@ -100,7 +100,7 @@ void firstboot() {
 		system("cls");
 		if(choiceForTutQ == 1) {
 			printf("You:\n   Huh. Oh, hi.\n\n");
-			printf("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Pettersonial the 3rd great   and almighty Knight of Luxgrave's proud military group organization of crime    stopping badassery' for long.\n");
+			printf("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Petterson the 3rd great   and almighty Knight of Luxgrave's proud military group' for long.\n");
 			printf("\nSir Pet:\n   Or Sir Pet for short.\n");
 		}
 		if(choiceForTutQ == 2) {
@@ -130,7 +130,7 @@ void firstboot() {
 		printf("\nSir Pet:");
 		printf("\n   Enough of the chit-chat. Welcome to the world of Luxglaive.");
 		printf("\n   Heroes of this realm come and go. I work at the Heroes Recruitment Agency");
-		printf("\n   You have great potential. So, would you like to join us?");
+		printf("\n   You don't have the best potential. However, would you like to join us any-ways?");
 
 		printf("\n1: Yes\n");
 		printf("2: No\n");
@@ -140,7 +140,7 @@ kitselect:
 		if(options == 1) {
 skiptutorial:
 			printf("Sir Pet:");
-			printf("\n   Good. Now heroes in this world are organized.\n   We organize ourselves into different skillsets. There's\n");
+			printf("\n   Good. Now heroes in this world are organized.\n   We organize ourselves into different skillsets who teach different abilities. There's\n");
 			printf("\n\n1: Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.");
 			printf("\n\n2: Thieves.       Who do damage as a %% of enemy's HP, they have medium HP\n                  and low armour.");
 			printf("\n\n3: Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP");
@@ -157,6 +157,21 @@ skiptutorial:
 			}
 
 		}
+
+		int kitQ;
+		scanf("%d", &kitQ);
+		switch(kitQ) {
+		case 1:
+            printf("");
+            break;
+
+
+
+
+
+		}
+
+
 		scanf("%d", &kit);
 		switch(kit) {
 		case 1:
@@ -220,7 +235,7 @@ skiptutorial:
 				break;
 			}
 		default:
-		    system("cls");
+			system("cls");
 			goto skiptutorial;
 			break;
 		}
