@@ -58,93 +58,149 @@ void firstboot() {
 	xps=0;
 	system("Cls");
 //ask player for char name
-	printf("Enter a username:");
-	printf("\n");
-	cin >> charname;
-	system("cls");
 
-	printf("Welcome, ");
-	lenCharname = charname.size();
-	for(i=0; i<lenCharname; i++) {
-		printf("%c", charname[i]);
-	}
 
-	printf(". \nWould you like to skip the tutorial?\n");
+	printf("\nWould you like to skip the tutorial?\n");
 	printf("1: Yes\n");
 	printf("2: No. Play the tutorial.\n");
-	printf("[hit the number you'd like to select, then enter]\n");
+	printf("[hit the number you'd like to select, then enter]\n>");
 	scanf("%d", &tutorial);
 
 	system("cls");
 
 
 	if(tutorial == 1) {
+		printf("Enter a username:");
+		printf("\n");
+		cin >> charname;
+		system("cls");
+
+		printf("Welcome, ");
+		lenCharname = charname.size();
+		for(i=0; i<lenCharname; i++) {
+			printf("%c", charname[i]);
+		}
 		goto skiptutorial;
 	}
 
 	if(tutorial != 1) {
-		printf("Hello? Are you awake yet, ");
+		printf("You awaken in a dark room, your body cold and sore.\n'Where am I?' you think to yourself.\nYou start trying to get up, but suddenly you hear shouting\n\n");
+		printf("???:\n   I don't know! When the hell can we kick them out the lab?!\n   We don't even know their name and their snoring is so loud and annoying!\n\n");
 
+		printf("That's right... Who am I?...I remember nothing.\nBut what should I call myself until then?\n\n");
+		printf("Give yourself a name:");
+		printf("\n>");
+		cin >> charname;
+		system("cls");
 
+		printf("\nYea, ");
+		lenCharname = charname.size();
 		for(i=0; i<lenCharname; i++) {
 			printf("%c", charname[i]);
 		}
-		printf("?");
+		printf(" will do.\n\n");
+
+		printf("The door slams open.\n\n");
+		printf("???:\n   You awake yet?\n");
 		printf("\nChoose an option to answer with:\n");
 		printf("\n1: Huh. Oh, hi.");
 		printf("\n2: Who the hell are you, and where am I?");
 		printf("\n3: Eh? ughh five more minutes...");
-		printf("\nType the number of your choice and hit enter.\n");
+		printf("\n4: Yea, call me '");
+		lenCharname = charname.size();
+		for(i=0; i<lenCharname; i++) {
+			printf("%c", charname[i]);
+		}
+		printf("' by the way.\n");
+		printf("\nType the number of your choice and hit enter.\n>");
 
 		cin >> choiceForTutQ;
 		system("cls");
 		if(choiceForTutQ == 1) {
 			printf("You:\n   Huh. Oh, hi.\n\n");
 			printf("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Petterson the 3rd great   and almighty Knight of Luxgrave's proud military group' for long.\n");
-			printf("\nSir Pet:\n   Or Sir Pet for short.\n");
+			printf("\nSir Pet:\n   Or Sir Pet for short.");
 		}
 		if(choiceForTutQ == 2) {
 			printf("You:\n   Who the hell are you, and where am I?\n\n");
-			printf("Sir Petterson:\n   I'm Sir Petterson. Call me Sir Pet for short.");
+			printf("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.");
 
 		}
 		if(choiceForTutQ == 3) {
 			printf("You:\n   Eh? ughh five more minutes...\n\n");
 			printf("???:\n   Ok.. I guess...");
-			printf("\n\nYou fall into a sleep, and reawaken to the same figure sitting next to you.");
+			printf("\n\nYou fall into a sleep, and reawaken to the same figure sitting next to you.\n");
 			Sleep(2000);
-			printf("???:\n   I guess that's enough sleep?\nSir Petterson:\nI'm Sir Petterson. Call me Sir Pet for short");
+			printf("Sir Pet:\n   I guess that's enough sleep?\nSir Petterson:\nI'm Sir Petterson. Call me Sir Pet for short");
 
 		}
-		if(choiceForTutQ != 1 && choiceForTutQ != 2 && choiceForTutQ != 3) {
-			printf("???:\n   You're so incompetent you can't even type an existing button?\n   Wow.");
-			printf("\nSir Petterson:\n   Anyways.. I'm Sir Petterson. Call me Sir Pet for short.");
+		if(choiceForTutQ == 4) {
 
+			printf("\nYou: Yea, call me '");
+			lenCharname = charname.size();
+			for(i=0; i<lenCharname; i++) {
+				printf("%c", charname[i]);
+			}
+			printf("' by the way.\n\n");
 
+			printf("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.");
 		}
-		Sleep(500);
-//ask player for class
-		printf("[...] \n\n([...] means type 1 and enter to continue.)\n");
-		scanf("%d", &throwaway);
+
+
+
+
+
+		if(choiceForTutQ != 1 && choiceForTutQ != 2 && choiceForTutQ != 3 && choiceForTutQ != 4) {
+			printf("???:\n   You're so incompetent you can't even give me an answer?\n   Wow.");
+			printf("\nSir Pet:\n   Anyways.. I'm Sir Petterson. Call me Sir Pet for short.");
+		}
+qAboutLux:
+		printf("\n\n   So how much do you know about Luxgrave?");
+
+		printf("\n1: Uh, nothing Sir.");
+		printf("\n2: I know I'm alive?");
+		printf("\n3: Absolutely everything.\n>");
+		cin >> choiceForTutQ;
 		system("cls");
+		switch(choiceForTutQ) {
+		case 1:
+            printf("Sir Pet:");
+            printf("\n   Well, I'll fill you in on the situation then.");
+            break;
+		case 2:
+            printf("Sir Pet:");
+            printf("\n   Well, I'll fill you in on the situation then.");
+            break;
+		case 3:
+            printf("Sir Pet:");
+            printf("\n   I can smell that bull from a mile away. I'll tell you anyways.");
+            break;
+        default:
+            system("cls");
+            goto qAboutLux;
+		}
+
+        printf("\n\n   Luxgrave is the world we inhabit [[add info]]\n");      //ADD INFO IN HERE
+        Sleep(1000);
 		printf("\nSir Pet:");
 		printf("\n   Enough of the chit-chat. Welcome to the world of Luxglaive.");
 		printf("\n   Heroes of this realm come and go. I work at the Heroes Recruitment Agency");
-		printf("\n   You don't have the best potential. However, would you like to join us any-ways?");
+		printf("\n   You don't have the best potential. However, would you like to join us anyway?");
 
 		printf("\n1: Yes\n");
-		printf("2: No\n");
+		printf("2: No\n>");
 		scanf("%d", &options);
 		system("cls");
-kitselect:
 		if(options == 1) {
 skiptutorial:
 			printf("Sir Pet:");
-			printf("\n   Good. Now heroes in this world are organized.\n   We organize ourselves into different skillsets who teach different abilities. There's\n");
-			printf("\n\n1: Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.");
-			printf("\n\n2: Thieves.       Who do damage as a %% of enemy's HP, they have medium HP\n                  and low armour.");
-			printf("\n\n3: Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP");
-			printf("\n\n4: and Tanks.     These people are the front line. They have low damage but make                  up for that with high HP and high Armour.\n\n");
+			printf("\n   Good. Now heroes in this world are organized into Guilds.\n   These guilds teach different abilities. There's\n");
+			printf("\n\n Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.");
+			printf("\n\n Thieves.       Who do damage as a %% of enemy's HP, they have medium HP\n                  and low armour.");
+			printf("\n\n Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP");
+			printf("\n\n Tanks.         These people are the front line. They have low damage but make                   up for that with high HP and high Armour.");
+			printf("\n\n   Want to know some more? Such as some basic abilities?\n");
+			printf("1: Yes\n2: No\n>");
 
 		} else {
 			printf("Sir Pet:");
@@ -152,25 +208,49 @@ skiptutorial:
 			Sleep(1750);
 			while(1) {
 				printf("Game Over");
-				Sleep(500);
+				Sleep(5000);
 				system("cls");
+				printf("Restart the .exe to play again...");
 			}
 
 		}
 
 		int kitQ;
 		scanf("%d", &kitQ);
+		system("cls");
 		switch(kitQ) {
 		case 1:
-            printf("");
+		    printf("Dark knight:\n");
+		    printf("Passive: Each kill adds a soul. 1 Soul = +3hp, +1dmg\n");
+		    printf("Mastery: Successful attacks restore a %% of MaxHP\n\n");
+
+		    printf("Thief:\n");
+			printf("Passive: Attack deal dmg as %% of enemy HP [Respects armour]\n");
+			printf("Mastery: Can attack twice per turn\n\n");
+
+			printf("Priest:\n");
+			printf("Passive: heals each turn, scales inversely with armour.\n");
+			printf("Mastery: When enemies attack they take dmg\n\n");
+
+			printf("Tank:\n");
+			printf("Passive: Damage scales with armour\n");
+			printf("Mastery: Tank ignores weapon miss chance\n\n");
+
+			break;
+        case 2:
+            printf(" ");
+            goto classSelect;
             break;
-
-
-
-
-
+        default:
+            goto skiptutorial;
 		}
-
+classSelect:
+        printf("So, who will you join?\n\n");
+        printf("1: Dark Knights,\n");
+        printf("2: Thieves,\n");
+        printf("3: Priests,\n");
+        printf("4: Tanks.\n");
+        printf("5: [Go back to class info]\n>");
 
 		scanf("%d", &kit);
 		switch(kit) {
@@ -186,7 +266,7 @@ skiptutorial:
 			case 2:
 				options = 1;
 				system("cls");
-				goto kitselect;
+				goto classSelect;
 				break;
 			}
 		case 2:
@@ -201,7 +281,7 @@ skiptutorial:
 			case 2:
 				options = 1;
 				system("cls");
-				goto kitselect;
+				goto classSelect;
 				break;
 			}
 		case 3:
@@ -216,7 +296,7 @@ skiptutorial:
 			case 2:
 				options = 1;
 				system("cls");
-				goto kitselect;
+				goto classSelect;
 				break;
 			}
 		case 4:
@@ -231,7 +311,7 @@ skiptutorial:
 			case 2:
 				options = 1;
 				system("cls");
-				goto kitselect;
+				goto classSelect;
 				break;
 			}
 		default:
@@ -240,7 +320,7 @@ skiptutorial:
 			break;
 		}
 kitselected:
-//ask if ready to start journey?
+
 		Sleep(500);
 		Sleep(500);
 		system("cls");

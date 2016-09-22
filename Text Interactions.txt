@@ -1,0 +1,212 @@
+//ask player for char name
+	
+
+	printf(". \nWould you like to skip the tutorial?\n");
+	printf("1: Yes\n");
+	printf("2: No. Play the tutorial.\n");
+	printf("[hit the number you'd like to select, then enter]\n");
+	scanf("%d", &tutorial);
+
+	system("cls");
+
+
+	if(tutorial == 1) {
+		printf("Enter a username:");
+		printf("\n");
+		cin >> charname;
+		system("cls");
+
+		printf("Welcome, ");
+		lenCharname = charname.size();
+		for(i=0; i<lenCharname; i++) {
+			printf("%c", charname[i]);
+		}
+		goto skiptutorial;
+	}
+
+	if(tutorial != 1) {
+		printf("You awaken in a dark room, your body cold and sore. 'Where am I?' you think to yourself.\n   You start trying to get up, but suddenly,");
+		printf("???:\n   I don't know! When the hell can we kick them out the lab?!\n   We don't even know their name and their snoring is so loud and annoying!\n");
+
+		printf("That's right... Who am I? *you think for a moment*... That's right... I remember nothing.\n   What should I call myself until then?\n");
+		printf("Give yourself a name":");
+		printf("\n");
+		cin >> charname;
+		system("cls");
+
+		printf("Welcome, ");
+		lenCharname = charname.size();
+		for(i=0; i<lenCharname; i++) {
+			printf("%c", charname[i]);
+		}
+
+
+		for(i=0; i<lenCharname; i++) {
+			printf("%c", charname[i]);
+		}
+		printf("?");
+		printf("\nChoose an option to answer with:\n");
+		printf("\n1: Huh. Oh, hi.");
+		printf("\n2: Who the hell are you, and where am I?");
+		printf("\n3: Eh? ughh five more minutes...");
+		printf("\nType the number of your choice and hit enter.\n");
+
+		cin >> choiceForTutQ;
+		system("cls");
+		if(choiceForTutQ == 1) {
+			printf("You:\n   Huh. Oh, hi.\n\n");
+			printf("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Petterson the 3rd great   and almighty Knight of Luxgrave's proud military group' for long.\n");
+			printf("\nSir Pet:\n   Or Sir Pet for short.\n");
+		}
+		if(choiceForTutQ == 2) {
+			printf("You:\n   Who the hell are you, and where am I?\n\n");
+			printf("Sir Petterson:\n   I'm Sir Petterson. Call me Sir Pet for short.");
+
+		}
+		if(choiceForTutQ == 3) {
+			printf("You:\n   Eh? ughh five more minutes...\n\n");
+			printf("???:\n   Ok.. I guess...");
+			printf("\n\nYou fall into a sleep, and reawaken to the same figure sitting next to you.");
+			Sleep(2000);
+			printf("???:\n   I guess that's enough sleep?\nSir Petterson:\nI'm Sir Petterson. Call me Sir Pet for short");
+
+		}
+		if(choiceForTutQ != 1 && choiceForTutQ != 2 && choiceForTutQ != 3) {
+			printf("???:\n   You're so incompetent you can't even type an existing button?\n   Wow.");
+			printf("\nSir Petterson:\n   Anyways.. I'm Sir Petterson. Call me Sir Pet for short.");
+
+
+		}
+		Sleep(500);
+//ask player for class
+		printf("[...] \n\n([...] means type 1 and enter to continue.)\n");
+		scanf("%d", &throwaway);
+		system("cls");
+		printf("\nSir Pet:");
+		printf("\n   Enough of the chit-chat. Welcome to the world of Luxglaive.");
+		printf("\n   Heroes of this realm come and go. I work at the Heroes Recruitment Agency");
+		printf("\n   You don't have the best potential. However, would you like to join us any-ways?");
+
+		printf("\n1: Yes\n");
+		printf("2: No\n");
+		scanf("%d", &options);
+		system("cls");
+kitselect:
+		if(options == 1) {
+skiptutorial:
+			printf("Sir Pet:");
+			printf("\n   Good. Now heroes in this world are organized.\n   We organize ourselves into different skillsets who teach different abilities. There's\n");
+			printf("\n\n1: Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.");
+			printf("\n\n2: Thieves.       Who do damage as a %% of enemy's HP, they have medium HP\n                  and low armour.");
+			printf("\n\n3: Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP");
+			printf("\n\n4: and Tanks.     These people are the front line. They have low damage but make                  up for that with high HP and high Armour.\n\n");
+
+		} else {
+			printf("Sir Pet:");
+			printf("\n   Oh. Come back to us when you're ready...");
+			Sleep(1750);
+			while(1) {
+				printf("Game Over");
+				Sleep(500);
+				system("cls");
+			}
+
+		}
+
+		int kitQ;
+		scanf("%d", &kitQ);
+		switch(kitQ) {
+		case 1:
+            printf("");
+            break;
+
+
+
+
+
+		}
+
+
+		scanf("%d", &kit);
+		switch(kit) {
+		case 1:
+			printf("You selected to be a 'Dark Knight'. Are you sure?\n1: Yes\n2: No. Choose another.\n");
+			scanf("%d", &options);
+			switch(options) {
+			case 1:
+				kit = 1;
+				printf("\nYou've become, a Dark Knight!");
+				goto kitselected;
+				break;
+			case 2:
+				options = 1;
+				system("cls");
+				goto kitselect;
+				break;
+			}
+		case 2:
+			printf("You selected to be a 'Thief'. Are you sure?\n1: Yes\n2: No. Choose another.\n");
+			scanf("%d", &options);
+			switch(options) {
+			case 1:
+				kit = 1;
+				printf("\nYou've become, a Thief!");
+				goto kitselected;
+				break;
+			case 2:
+				options = 1;
+				system("cls");
+				goto kitselect;
+				break;
+			}
+		case 3:
+			printf("You selected to be a 'Priest'. Are you sure?\n1: Yes\n2: No. Choose another.\n");
+			scanf("%d", &options);
+			switch(options) {
+			case 1:
+				kit = 1;
+				printf("\nYou've become, a Priest!");
+				goto kitselected;
+				break;
+			case 2:
+				options = 1;
+				system("cls");
+				goto kitselect;
+				break;
+			}
+		case 4:
+			printf("You selected to be a 'Tank'. Are you sure?\n1: Yes\n2: No. Choose another.\n");
+			scanf("%d", &options);
+			switch(options) {
+			case 1:
+				kit = 1;
+				printf("\nYou've become, a Tank!");
+				goto kitselected;
+				break;
+			case 2:
+				options = 1;
+				system("cls");
+				goto kitselect;
+				break;
+			}
+		default:
+			system("cls");
+			goto skiptutorial;
+			break;
+		}
+kitselected:
+//ask if ready to start journey?
+		Sleep(500);
+		Sleep(500);
+		system("cls");
+		string petlastline = "Congratulations. Now, get out of my house!";
+		int lenpetlastline = petlastline.size();
+		for(i=0; i<lenpetlastline; i++) {
+			printf("%c", petlastline[i]);
+			Sleep(25);
+		}
+		color = 240;
+		SetConsoleTextAttribute(hConsole, color);
+		Sleep(2500);
+	}
+}

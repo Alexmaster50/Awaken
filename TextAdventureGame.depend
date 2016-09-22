@@ -96,3 +96,98 @@
 	<math.h>
 	<string>
 
+1474360008 source:c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\testingitworks.cpp
+	"Levelbars.h"
+	"Healthbars.h"
+	"Mainmenu.h"
+	"Questing.h"
+
+1461583912 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\levelbars.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	"Levels.h"
+	"Healthbars.h"
+
+1461583907 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\levels.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	<time.h>
+	<math.h>
+
+1461583915 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\healthbars.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+
+1474536705 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\mainmenu.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	<string>
+	"Healthbars.h"
+	"Levelbars.h"
+	"Questing.h"
+	"Fight.h"
+	"Shop.h"
+
+1461332717 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\questing.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	"Healthbars.h"
+
+1461583918 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\fight.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	<string>
+	"Levels.h"
+	"Levelbars.h"
+	"Healthbars.h"
+	"Questing.h"
+
+1463735751 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\shop.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	<string>
+
