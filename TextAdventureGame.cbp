@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Fight.h" />
+		<Unit filename="GlobalFuncs.h" />
 		<Unit filename="Healthbars.h" />
 		<Unit filename="Levelbars.h" />
 		<Unit filename="Levels.h" />
@@ -40,6 +41,7 @@
 		<Unit filename="Questing.h" />
 		<Unit filename="Shop.h" />
 		<Unit filename="TestingItWorks.cpp" />
+		<Unit filename="Weapons.h" />
 		<Unit filename="classes.h" />
 		<Extensions>
 			<code_completion />

@@ -13,14 +13,14 @@
 #include "Levelbars.h"
 #include "Healthbars.h"
 #include "Questing.h"
-
+#include "Shop.h"
 
 
 #ifndef Fight
 #define Fight
 
 int fighthandle = 0;
-int shards = 100;
+
 
 
 
@@ -36,8 +36,8 @@ void enemywins() {
 	color = 244;
 	SetConsoleTextAttribute(hConsole, color);
 	system("cls");
-	printf("Welcome to Luxglaive's finest hospital: 'Liastrin Hospital\n");
-	printf("We recommend training more or buying more gear before fighting there again!\n");
+	gTyper("Welcome to Luxglaive's finest hospital: 'Liastrin Hospital\n", 40);
+	gTyper("We recommend training more or buying more gear before fighting there again!\n", 40);
 	Sleep(2300);
 }
 

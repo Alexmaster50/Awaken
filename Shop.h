@@ -8,7 +8,7 @@
 #include <cstdlib>
 #include <math.h>
 #include <string>
-//#include "Mainmenu.h"
+
 
 using namespace std;
 
@@ -19,7 +19,7 @@ using namespace std;
 string charname = "o";
 int lenCharname;
 
-
+int shards = 100;
 
 
 

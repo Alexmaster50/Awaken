@@ -7,7 +7,7 @@
 #include <time.h>
 #include <cstdlib>
 #include <math.h>
-
+#include "GlobalFuncs.h"
 
 
 using namespace std;
@@ -40,6 +40,30 @@ void Colorworks() {
 	color = 15;
 	SetConsoleTextAttribute(hConsole, color);
 }
+
+void consoleTalking(){
+    color = 242;
+	SetConsoleTextAttribute(hConsole, color);
+}
+void allyTalking(){
+    color = 249;
+	SetConsoleTextAttribute(hConsole, color);
+}
+void playerTalking(){
+    color = 244;
+	SetConsoleTextAttribute(hConsole, color);
+}
+void bossTalking(){
+    color = 253;
+	SetConsoleTextAttribute(hConsole, color);
+}
+void finalBossTalking(){
+    color = 252;
+	SetConsoleTextAttribute(hConsole, color);
+}
+
+
+
 
 
 void printenemydashes() {
@@ -131,7 +155,6 @@ void printenemydashes() {
 
 
 
-
 void printdashes() {
 	if(charhealthP == 0) {
 		color = 206;
@@ -220,9 +243,6 @@ void printdashes() {
 }
 
 
-
-
-
 void printhealth() {
 
 	color = 242;
@@ -277,9 +297,6 @@ void printenemyhealth() {
 	color = 255;
 	SetConsoleTextAttribute(hConsole, color);
 }
-
-
-
 
 
 

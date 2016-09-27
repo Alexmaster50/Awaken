@@ -10,10 +10,11 @@
 #include <string>
 #include "Healthbars.h"
 #include "Levelbars.h"
-#include "Questing.h"
 #include "Fight.h"
-#include "Shop.h"
+#include "Questing.h"
+
 using namespace std;
+
 
 
 #ifndef Mainmenu
@@ -23,9 +24,8 @@ int throwaway;
 int options = 0;
 int options2 = 0;
 int kit = 0;
-//string charname = "o";
-//int lenCharname;
 int tutorial = 0;
+
 
 
 void firstboot() {
@@ -59,7 +59,7 @@ void firstboot() {
 	system("Cls");
 //ask player for char name
 
-
+    consoleTalking();
 	printf("\nWould you like to skip the tutorial?\n");
 	printf("1: Yes\n");
 	printf("2: No. Play the tutorial.\n");
@@ -71,7 +71,7 @@ void firstboot() {
 
 	if(tutorial == 1) {
 		printf("Enter a username:");
-		printf("\n");
+		printf("\n>");
 		cin >> charname;
 		system("cls");
 
@@ -80,32 +80,58 @@ void firstboot() {
 		for(i=0; i<lenCharname; i++) {
 			printf("%c", charname[i]);
 		}
+		printf("\n");
+		Sleep(1500);
+		system("cls");
 		goto skiptutorial;
 	}
 
-	if(tutorial != 1) {
-		printf("You awaken in a dark room, your body cold and sore.\n'Where am I?' you think to yourself.\nYou start trying to get up, but suddenly you hear shouting\n\n");
-		printf("???:\n   I don't know! When the hell can we kick them out the lab?!\n   We don't even know their name and their snoring is so loud and annoying!\n\n");
+/*
+*           *
+*  TUTORIAL *
+*           *
+*/
 
-		printf("That's right... Who am I?...I remember nothing.\nBut what should I call myself until then?\n\n");
+	if(tutorial != 1) {
+        consoleTalking();
+		gTyper("You awaken in a dark room, your body cold and sore.\n", 40);
+        playerTalking();
+        gTyper("'Where am I?' ", 40);
+        consoleTalking();
+        gTyper("you think to yourself.\nYou start trying to get up, but suddenly you hear shouting\n\n", 40);
+		allyTalking();
+		gTyper("???:\n   I don't know! When the hell can we kick them out the lab?!\n   We don't even know their name and their snoring is so loud and annoying!\n\n", 40);
+        playerTalking();
+		gTyper("That's right, who am I?", 40);
+        gTyper("...", 330);
+        gTyper("I remember nothing.\nBut what should I call myself until then?\n\n", 40);
+        consoleTalking();
 		printf("Give yourself a name:");
 		printf("\n>");
 		cin >> charname;
 		system("cls");
-
-		printf("\nYea, ");
+        playerTalking();
+		gTyper("\nYea, ", 40);
 		lenCharname = charname.size();
 		for(i=0; i<lenCharname; i++) {
 			printf("%c", charname[i]);
+			Sleep(40);
 		}
-		printf(" will do.\n\n");
-
-		printf("The door slams open.\n\n");
-		printf("???:\n   You awake yet?\n");
+		gTyper(" will do.\n\n", 40);
+        consoleTalking();
+		gTyper("The door slams open.\n\n", 40);
+		allyTalking();
+		gTyper("???:\n   You awake yet?\n", 50);
+		Sleep(100);
+		consoleTalking();
 		printf("\nChoose an option to answer with:\n");
+		Sleep(100);
 		printf("\n1: Huh. Oh, hi.");
+		Sleep(100);
 		printf("\n2: Who the hell are you, and where am I?");
+		Sleep(100);
 		printf("\n3: Eh? ughh five more minutes...");
+		Sleep(100);
 		printf("\n4: Yea, call me '");
 		lenCharname = charname.size();
 		for(i=0; i<lenCharname; i++) {
@@ -117,33 +143,42 @@ void firstboot() {
 		cin >> choiceForTutQ;
 		system("cls");
 		if(choiceForTutQ == 1) {
-			printf("You:\n   Huh. Oh, hi.\n\n");
-			printf("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Petterson the 3rd great   and almighty Knight of Luxgrave's proud military group' for long.\n");
-			printf("\nSir Pet:\n   Or Sir Pet for short.");
+            playerTalking();
+			gTyper("You:\n   Huh. Oh, hi.\n\n", 40);
+            allyTalking();
+			gTyper("Sir Petterson:\n   Hi. I'm Sir Petterson, but you can call me 'Sir Petterson the 3rd great   and almighty Knight of Luxgrave's proud military group' for long.\n", 40);
+			gTyper("\nSir Pet:\n   Or Sir Pet for short.", 40);
 		}
 		if(choiceForTutQ == 2) {
-			printf("You:\n   Who the hell are you, and where am I?\n\n");
-			printf("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.");
+            playerTalking();
+			gTyper("You:\n   Who the hell are you, and where am I?\n\n", 40);
+            allyTalking();
+			gTyper("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.", 40);
 
 		}
 		if(choiceForTutQ == 3) {
-			printf("You:\n   Eh? ughh five more minutes...\n\n");
-			printf("???:\n   Ok.. I guess...");
-			printf("\n\nYou fall into a sleep, and reawaken to the same figure sitting next to you.\n");
+            playerTalking();
+			gTyper("You:\n   Eh? ughh five more minutes...\n\n", 40);
+            allyTalking();
+			gTyper("???:\n   Ok.. I guess...", 40);
+			consoleTalking();
+			gTyper("\n\nYou fall into a sleep, and reawaken to the same figure sitting next to you.\n", 40);
 			Sleep(2000);
-			printf("Sir Pet:\n   I guess that's enough sleep?\nSir Petterson:\nI'm Sir Petterson. Call me Sir Pet for short");
+			allyTalking();
+			gTyper("Sir Pet:\n   I guess that's enough sleep?\nSir Petterson:\nI'm Sir Petterson. Call me Sir Pet for short", 40);
 
 		}
 		if(choiceForTutQ == 4) {
-
-			printf("\nYou: Yea, call me '");
+            playerTalking();
+			gTyper("\nYou: Yea, call me '", 40);
 			lenCharname = charname.size();
 			for(i=0; i<lenCharname; i++) {
 				printf("%c", charname[i]);
+				Sleep(40);
 			}
-			printf("' by the way.\n\n");
-
-			printf("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.");
+			gTyper("' by the way.\n\n", 40);
+            allyTalking();
+			gTyper("Sir Pet:\n   I'm Sir Petterson. Call me Sir Pet for short.", 40);
 		}
 
 
@@ -151,62 +186,70 @@ void firstboot() {
 
 
 		if(choiceForTutQ != 1 && choiceForTutQ != 2 && choiceForTutQ != 3 && choiceForTutQ != 4) {
-			printf("???:\n   You're so incompetent you can't even give me an answer?\n   Wow.");
-			printf("\nSir Pet:\n   Anyways.. I'm Sir Petterson. Call me Sir Pet for short.");
+			allyTalking();
+			gTyper("???:\n   You're so incompetent you can't even give me an answer?\n   Wow.", 40);
+			gTyper("\nSir Pet:\n   Anyways.. I'm Sir Petterson. Call me Sir Pet for short.", 40);
 		}
 qAboutLux:
-		printf("\n\n   So how much do you know about Luxgrave?");
-
-		printf("\n1: Uh, nothing Sir.");
-		printf("\n2: I know I'm alive?");
-		printf("\n3: Absolutely everything.\n>");
+        allyTalking();
+		gTyper("\n\n   So how much do you know about Luxgrave?", 40);
+        consoleTalking();
+		gTyper("\n1: Uh, nothing Sir.", 40);
+		gTyper("\n2: I know I'm alive?", 40);
+		gTyper("\n3: Absolutely everything.\n>", 40);
 		cin >> choiceForTutQ;
 		system("cls");
+		allyTalking();
 		switch(choiceForTutQ) {
 		case 1:
-            printf("Sir Pet:");
-            printf("\n   Well, I'll fill you in on the situation then.");
+            gTyper("Sir Pet:", 40);
+            gTyper("\n   Well, I'll fill you in on the situation then.", 40);
             break;
 		case 2:
-            printf("Sir Pet:");
-            printf("\n   Well, I'll fill you in on the situation then.");
+            gTyper("Sir Pet:", 40);
+            gTyper("\n   Well, I'll fill you in on the situation then.", 40);
             break;
 		case 3:
-            printf("Sir Pet:");
-            printf("\n   I can smell that bull from a mile away. I'll tell you anyways.");
+            gTyper("Sir Pet:", 40);
+            gTyper("\n   I can smell that bull from a mile away. I'll tell you anyways.", 40);
             break;
         default:
             system("cls");
             goto qAboutLux;
 		}
 
-        printf("\n\n   Luxgrave is the world we inhabit [[add info]]\n");      //ADD INFO IN HERE
+        allyTalking();
+        gTyper("\n\n   Luxgrave is the world we inhabit [[add info]]\n", 40);      //ADD INFO IN HERE
         Sleep(1000);
-		printf("\nSir Pet:");
-		printf("\n   Enough of the chit-chat. Welcome to the world of Luxglaive.");
-		printf("\n   Heroes of this realm come and go. I work at the Heroes Recruitment Agency");
-		printf("\n   You don't have the best potential. However, would you like to join us anyway?");
+		gTyper("\nSir Pet:", 40);
+		gTyper("\n   Enough of the chit-chat. Welcome to the world of Luxglaive.", 40);
+		gTyper("\n   Heroes of this realm come and go. I work at the Heroes Recruitment Agency", 40);
+		gTyper("\n   You don't have the best potential. However, would you like to join us anyway?", 40);
 
+        consoleTalking();
 		printf("\n1: Yes\n");
 		printf("2: No\n>");
 		scanf("%d", &options);
 		system("cls");
 		if(options == 1) {
 skiptutorial:
-			printf("Sir Pet:");
-			printf("\n   Good. Now heroes in this world are organized into Guilds.\n   These guilds teach different abilities. There's\n");
-			printf("\n\n Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.");
-			printf("\n\n Thieves.       Who do damage as a %% of enemy's HP, they have medium HP\n                  and low armour.");
-			printf("\n\n Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP");
-			printf("\n\n Tanks.         These people are the front line. They have low damage but make                   up for that with high HP and high Armour.");
-			printf("\n\n   Want to know some more? Such as some basic abilities?\n");
+            allyTalking();
+			gTyper("Sir Pet:", 40);
+			gTyper("\n   Good. Now heroes in this world are organized into Guilds.\n   These guilds teach different abilities. There's\n", 40);
+			gTyper("\n\n Dark Knights.  Who have medium damage, low HP, medium armour and absorb \n                  enemy's souls to improve HP and Damage, at the loss of Armor.", 40);
+			gTyper("\n\n Thieves.       Who do damage as a % of enemy's HP, they have medium HP\n                  and low armour.", 40);
+			gTyper("\n\n Priests.       Priests have low damage and health, and medium armour. \n                  However each round they heal (x)hp a turn based on maxHP", 40);
+			gTyper("\n\n Tanks.         These people are the front line. They have low damage but make                   up for that with high HP and high Armour.", 40);
+			gTyper("\n\n   Want to know some more? Such as some basic abilities?\n", 40);
 			printf("1: Yes\n2: No\n>");
 
 		} else {
-			printf("Sir Pet:");
-			printf("\n   Oh. Come back to us when you're ready...");
+		    allyTalking();
+			gTyper("Sir Pet:", 40);
+			gTyper("\n   Oh. Come back to us when you're ready...", 40);
 			Sleep(1750);
 			while(1) {
+                consoleTalking();
 				printf("Game Over");
 				Sleep(5000);
 				system("cls");
@@ -218,23 +261,24 @@ skiptutorial:
 		int kitQ;
 		scanf("%d", &kitQ);
 		system("cls");
+		allyTalking();
 		switch(kitQ) {
 		case 1:
-		    printf("Dark knight:\n");
-		    printf("Passive: Each kill adds a soul. 1 Soul = +3hp, +1dmg\n");
-		    printf("Mastery: Successful attacks restore a %% of MaxHP\n\n");
+		    gTyper("Dark knight:\n", 40);
+		    gTyper("Passive: Each kill adds a soul. 1 Soul = +3hp, +1dmg\n", 40);
+		    gTyper("Mastery: Successful attacks restore a % of MaxHP\n\n", 40);
 
-		    printf("Thief:\n");
-			printf("Passive: Attack deal dmg as %% of enemy HP [Respects armour]\n");
-			printf("Mastery: Can attack twice per turn\n\n");
+		    gTyper("Thief:\n", 40);
+			gTyper("Passive: Attack deal dmg as % of enemy HP [Respects armour]\n", 40);
+			gTyper("Mastery: Can attack twice per turn\n\n", 40);
 
-			printf("Priest:\n");
-			printf("Passive: heals each turn, scales inversely with armour.\n");
-			printf("Mastery: When enemies attack they take dmg\n\n");
+			gTyper("Priest:\n", 40);
+			gTyper("Passive: heals each turn, scales inversely with armour.\n", 40);
+			gTyper("Mastery: When enemies attack they take dmg\n\n", 40);
 
-			printf("Tank:\n");
-			printf("Passive: Damage scales with armour\n");
-			printf("Mastery: Tank ignores weapon miss chance\n\n");
+			gTyper("Tank:\n", 40);
+			gTyper("Passive: Damage scales with armour\n", 40);
+			gTyper("Mastery: Tank ignores weapon miss chance\n\n", 40);
 
 			break;
         case 2:
@@ -245,7 +289,9 @@ skiptutorial:
             goto skiptutorial;
 		}
 classSelect:
-        printf("So, who will you join?\n\n");
+        allyTalking();
+        gTyper("So, who will you join?\n\n", 40);
+        consoleTalking();
         printf("1: Dark Knights,\n");
         printf("2: Thieves,\n");
         printf("3: Priests,\n");
@@ -253,6 +299,7 @@ classSelect:
         printf("5: [Go back to class info]\n>");
 
 		scanf("%d", &kit);
+		consoleTalking();
 		switch(kit) {
 		case 1:
 			printf("You selected to be a 'Dark Knight'. Are you sure?\n1: Yes\n2: No. Choose another.\n");
@@ -324,6 +371,7 @@ kitselected:
 		Sleep(500);
 		Sleep(500);
 		system("cls");
+		allyTalking();
 		string petlastline = "Congratulations. Now, get out of my house!";
 		int lenpetlastline = petlastline.size();
 		for(i=0; i<lenpetlastline; i++) {
@@ -335,6 +383,18 @@ kitselected:
 		Sleep(2500);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 int locationchoice;
 void mainmenu() {
@@ -677,7 +737,7 @@ openingCM:
 		system("cls");
 		goto openingMM;
 		break;
-
+	}
 
 //01        Xeal ruins              min:    00  [EXP]
 //02        Xeal city               min:    02  [EE: kill 10 in ruins]
@@ -700,6 +760,6 @@ openingCM:
 
 
 
-	}
 }
+
 #endif

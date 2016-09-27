@@ -1,1 +1,6 @@
-5 9001 523
+Char 1 level: 5000
+50
+Char 1 Gold: 
+500
+Char 1 XP: 
+50000

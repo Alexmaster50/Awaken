@@ -96,7 +96,7 @@
 	<math.h>
 	<string>
 
-1474360008 source:c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\testingitworks.cpp
+1474886110 source:c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\testingitworks.cpp
 	"Levelbars.h"
 	"Healthbars.h"
 	"Mainmenu.h"
@@ -123,7 +123,7 @@
 	<time.h>
 	<math.h>
 
-1461583915 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\healthbars.h
+1474886175 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\healthbars.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -133,8 +133,9 @@
 	<time.h>
 	<cstdlib>
 	<math.h>
+	"GlobalFuncs.h"
 
-1474536705 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\mainmenu.h
+1474986004 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\mainmenu.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -147,11 +148,10 @@
 	<string>
 	"Healthbars.h"
 	"Levelbars.h"
-	"Questing.h"
 	"Fight.h"
-	"Shop.h"
+	"Questing.h"
 
-1461332717 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\questing.h
+1474886175 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\questing.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -163,7 +163,7 @@
 	<math.h>
 	"Healthbars.h"
 
-1461583918 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\fight.h
+1474985092 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\fight.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -178,8 +178,21 @@
 	"Levelbars.h"
 	"Healthbars.h"
 	"Questing.h"
+	"Shop.h"
 
-1463735751 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\shop.h
+1474985087 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\shop.h
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<iostream>
+	<cstdlib>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<math.h>
+	<string>
+
+1474886293 c:\users\alex\desktop\developing stuffs\c++\textbasedadventuregame\awaken\globalfuncs.h
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

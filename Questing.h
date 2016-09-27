@@ -8,7 +8,6 @@
 #include <cstdlib>
 #include <math.h>
 #include "Healthbars.h"
-
 #ifndef Questing
 #define Questing
 
